@@ -5,8 +5,5 @@ FROM quay.io/forem/forem:production
 # See https://github.com/forem/forem/issues/13307 for more details.
 RUN mkdir /opt/apps/forem/public/localimages
 
-RUN bundle exec rake assets:precompile
-
-
 ADD ./scripts scripts/
 ADD ./app app/
