@@ -7,7 +7,7 @@ RUN mkdir /opt/apps/forem/public/localimages
 
 RUN mkdir -p "${APP_HOME}"/public/{assets,images,packs,podcasts,uploads}
 
-RUN RAILS_ENV=production NODE_ENV=production bundle exec rake assets:precompile
+RUN bundle exec rake assets:precompile
 
 
 ADD ./scripts scripts/
