@@ -7,4 +7,3 @@ RUN mkdir /opt/apps/forem/public/localimages
 
 ADD ./scripts scripts/
 ADD ./app app/
-ADD ./assets assets/
