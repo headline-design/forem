@@ -42,7 +42,7 @@ services:
     dockerfilePath: ./forem/Dockerfile
     dockerContext: ./forem
     dockerCommand: ./scripts/sidekiq.sh
-    plan: starter plus
+    plan: pro
     envVars:
       - fromGroup: rails
       - key: REDIS_HOST
@@ -75,7 +75,7 @@ services:
     dockerfilePath: ./forem/Dockerfile
     dockerContext: ./forem
     dockerCommand: ./scripts/rails.sh
-    plan: starter plus
+    plan: pro
     disk:
       name: data
       mountPath: /opt/apps/forem/public/uploads
@@ -108,7 +108,7 @@ services:
 
 databases:
   - name: forem
-    plan: starter
+    plan: pro
 
 envVarGroups:
   - name: rails
